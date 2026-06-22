@@ -18,6 +18,10 @@ def load_data():
        "dataset/internshala_jobs.csv"
     )
 
+    df["Job Title"] = df["Job Title"].astype(str)
+    df["Company"] = df["Company"].astype(str)
+    df["Location"] = df["Location"].astype(str)
+
     df = df.drop_duplicates()
 
     return df
