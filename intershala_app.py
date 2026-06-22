@@ -15,7 +15,7 @@ st.set_page_config(
 def load_data():
 
     df = pd.read_csv(
-        r"C:\Users\DELL\OneDrive\Desktop\intershala\dataset\internshala_jobs.csv"
+       "dataset/internshala_jobs.csv"
     )
 
     df = df.drop_duplicates()
