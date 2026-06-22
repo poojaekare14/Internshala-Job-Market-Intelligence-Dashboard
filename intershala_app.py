@@ -17,10 +17,13 @@ def load_data():
     df = pd.read_csv(
        "dataset/internshala_jobs.csv"
     )
-
+    # Fix data types
     df["Job Title"] = df["Job Title"].astype(str)
     df["Company"] = df["Company"].astype(str)
     df["Location"] = df["Location"].astype(str)
+
+     # Replace missing values
+    df = df.fillna("")
 
     df = df.drop_duplicates()
 
@@ -110,7 +113,8 @@ with tabs[0]:
     st.markdown("---")
 
     st.subheader("Dataset Head")
-    st.dataframe(df.head())
+    display_df = df.head().astype(str)
+    st.dataframe(display_df)
 
     st.markdown("---")
 
@@ -143,7 +147,8 @@ with tabs[0]:
 
     st.subheader("Dataset Statistics")
 
-    st.dataframe(df.describe(include="all"))
+    stats_df = df.describe(include="all").astype(str)
+    st.dataframe(stats_df)
 
     st.markdown("---")
 
