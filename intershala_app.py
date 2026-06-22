@@ -165,7 +165,7 @@ with tabs[1]:
     )
 
     st.plotly_chart(
-        fig,width=stretch
+        fig,width="stretch"
     )
     top_companies = (
     filtered_df["Company"]
@@ -182,7 +182,7 @@ with tabs[1]:
     )
     st.plotly_chart(
     fig2,
-    width=stretch
+    width="stretch"
     )
     st.info("""
     Observation:
@@ -216,7 +216,7 @@ with tabs[2]:
         title="Top Hiring Companies"
     )
 
-    st.plotly_chart(fig,width=stretch)
+    st.plotly_chart(fig,width="stretch")
 
     st.info("""
     Observation:
@@ -252,7 +252,7 @@ with tabs[3]:
         title="Most Demanded Skills"
     )
 
-    st.plotly_chart(fig, width=stretch)
+    st.plotly_chart(fig, width="stretch")
 
     st.info("""
     Observation:
@@ -286,7 +286,7 @@ with tabs[4]:
         hole=0.5
     )
 
-    st.plotly_chart(fig, width=stretch)
+    st.plotly_chart(fig, width="stretch")
 
     st.info("""
     Observation:
@@ -322,7 +322,7 @@ with tabs[5]:
         title="Salary Distribution"
     )
 
-    st.plotly_chart(fig, width=stretch)
+    st.plotly_chart(fig, width="stretch")
 
     top_salary = (
         salary_df
@@ -337,7 +337,7 @@ with tabs[5]:
         title="Highest Paying Roles"
     )
 
-    st.plotly_chart(fig2, width=stretch)
+    st.plotly_chart(fig2, width="stretch")
 
     st.info("""
     Observation:
@@ -369,7 +369,7 @@ with tabs[6]:
         title="Experience Requirement Distribution"
     )
 
-    st.plotly_chart(fig, width=stretch)
+    st.plotly_chart(fig, width="stretch")
 
     st.info("""
     Observation:
@@ -402,7 +402,7 @@ with tabs[7]:
         title="Most Common Job Roles"
     )
 
-    st.plotly_chart(fig, width=stretch)
+    st.plotly_chart(fig, width="stretch")
 
     st.info("""
     Observation:
