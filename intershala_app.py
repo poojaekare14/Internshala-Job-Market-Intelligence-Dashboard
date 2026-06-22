@@ -3,13 +3,14 @@ import pandas as pd
 import plotly.express as px
 import os
 
-st.write("Current Folder:", os.getcwd())
-st.write("Files:", os.listdir())
 st.set_page_config(
     page_title="Internshala Job Intelligence Dashboard",
     page_icon="💼",
     layout="wide"
 )
+
+st.write("Current Folder:", os.getcwd())
+st.write("Files:", os.listdir())
 
 @st.cache_data
 def load_data():
