@@ -15,9 +15,18 @@ st.write("Files:", os.listdir())
 @st.cache_data
 def load_data():
 
-    df = pd.read_csv(
-       "dataset/internshala_jobs.csv"
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    file_path = os.path.join(
+        BASE_DIR,
+        "dataset",
+        "internshala_jobs.csv"
     )
+
+    st.write("Looking for file:", file_path)
+
+    df = pd.read_csv(file_path)
+    
     # Fix data types
     df["Job Title"] = df["Job Title"].astype(str)
     df["Company"] = df["Company"].astype(str)
